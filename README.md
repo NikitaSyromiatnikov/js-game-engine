@@ -12,6 +12,7 @@ Congrats! You are ready to go.
 
 ## CodeGen
 To generate an HTML5 boilerplate for the game just run the following command in the root directory
+
 `yarn generate`
 
 Options:
