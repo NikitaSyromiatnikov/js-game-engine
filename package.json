@@ -1,0 +1,13 @@
+{
+  "name": "js-game-engine",
+  "version": "1.0.0",
+  "repository": "https://github.com/NikitaSyromiatnikov/js-game-engine.git",
+  "author": "Nikita Syromiatnikov <nikitasyromiatnikovdev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "generate": "npx ts-node ./utils/codegen/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.14"
+  }
+}
