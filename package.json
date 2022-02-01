@@ -5,9 +5,17 @@
   "author": "Nikita Syromiatnikov <nikitasyromiatnikovdev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "generate": "npx ts-node ./utils/codegen/index.ts"
+    "generate": "npx ts-node ./utils/codegen/index.ts",
+    "build:prod": "webpack-cli --env prod --progress --profile --mode=production",
+    "build:dev": "webpack-cli --env prod --progress --profile --mode=development"
   },
   "devDependencies": {
-    "@types/node": "^17.0.14"
+    "@types/node": "^17.0.14",
+    "ts-loader": "^9.2.6",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "typescript": "^4.5.5"
   }
 }
