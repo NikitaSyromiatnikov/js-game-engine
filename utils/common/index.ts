@@ -78,6 +78,20 @@ export const writeStyles = (settings: ICodeGenSettings) => {
   });
 };
 
+export const writeJS = (settings: ICodeGenSettings) => {
+  const jsPath = path.resolve(settings.path, "js");
+
+  fs.mkdir(jsPath, { recursive: true }, (error) => {
+    if (error) {
+      throw new Error("Could not create js directory");
+    }
+  });
+
+  console.log(
+    "Application has been initialized, please run `yarn build:dev` or `yarn build:prod` to bundle game files"
+  );
+};
+
 export const prepareHTML = (settings: ICodeGenSettings) => {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -87,11 +101,13 @@ export const prepareHTML = (settings: ICodeGenSettings) => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${settings.name}</title>
     <link rel="stylesheet" href="./styles/${settings.css}" />
+    <script src="./js/main.js"></script>
   </head>
   <body>
     <div class="center">
       <canvas id="canvas"></canvas>
     </div>
   </body>
-</html>`;
+</html>
+`;
 };
